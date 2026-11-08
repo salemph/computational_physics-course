@@ -1,0 +1,29 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2026-11-07T11:18:54Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-11-07T11:18:54Z",
+      "mimetype": "text/plain",
+      "name": "exercise_answers.txt",
+      "path": "Special_Functions_codes/doc/exercise_answers.txt",
+      "size": 1250,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2026-11-08T22:08:39.886189Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2026-11-08T22:08:39.886503Z",
+  "mimetype": null,
+  "name": "doc",
+  "path": "Special_Functions_codes/doc",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

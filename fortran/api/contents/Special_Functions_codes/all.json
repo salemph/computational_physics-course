@@ -1,0 +1,71 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2026-11-08T22:08:39.914186Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-11-08T22:08:39.948611Z",
+      "mimetype": null,
+      "name": "python",
+      "path": "Special_Functions_codes/python",
+      "size": null,
+      "type": "directory",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-11-08T22:08:39.886924Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-11-08T22:08:39.904277Z",
+      "mimetype": null,
+      "name": "figures",
+      "path": "Special_Functions_codes/figures",
+      "size": null,
+      "type": "directory",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-11-08T22:08:39.905863Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-11-08T22:08:39.912950Z",
+      "mimetype": null,
+      "name": "fortran",
+      "path": "Special_Functions_codes/fortran",
+      "size": null,
+      "type": "directory",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-11-08T22:08:39.886189Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-11-08T22:08:39.886503Z",
+      "mimetype": null,
+      "name": "doc",
+      "path": "Special_Functions_codes/doc",
+      "size": null,
+      "type": "directory",
+      "writable": true
+    }
+  ],
+  "created": "2026-11-08T22:08:39.885212Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2026-11-08T22:08:39.914191Z",
+  "mimetype": null,
+  "name": "Special_Functions_codes",
+  "path": "Special_Functions_codes",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

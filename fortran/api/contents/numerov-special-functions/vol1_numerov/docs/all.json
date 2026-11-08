@@ -1,0 +1,43 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2026-11-08T22:08:39.956017Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-11-08T22:08:39.958489Z",
+      "mimetype": null,
+      "name": "course",
+      "path": "numerov-special-functions/vol1_numerov/docs/course",
+      "size": null,
+      "type": "directory",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-11-08T22:08:39.958844Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-11-08T22:08:39.959982Z",
+      "mimetype": null,
+      "name": "solutions",
+      "path": "numerov-special-functions/vol1_numerov/docs/solutions",
+      "size": null,
+      "type": "directory",
+      "writable": true
+    }
+  ],
+  "created": "2026-11-08T22:08:39.955980Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2026-11-08T22:08:39.958850Z",
+  "mimetype": null,
+  "name": "docs",
+  "path": "numerov-special-functions/vol1_numerov/docs",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

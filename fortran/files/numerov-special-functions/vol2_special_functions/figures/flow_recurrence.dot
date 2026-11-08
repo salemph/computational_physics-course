@@ -1,0 +1,16 @@
+digraph G {
+  graph [fontname="Helvetica", fontsize=11, nodesep=0.25, ranksep=0.3, bgcolor="white"];
+  node  [fontname="Helvetica", fontsize=10, shape=box, style="rounded,filled", fillcolor="#eef4fc", color="#2a78d6", penwidth=1.3, margin="0.15,0.06"];
+  edge  [fontname="Helvetica", fontsize=9, color="#555555", arrowsize=0.7];
+  s [label="START: need f_0 … f_N at x", shape=oval, fillcolor="#dff3ea", color="#1baf7a"];
+  a [label="Identify the three-term recurrence\nf_{n+1} = a_n(x) f_n − b_n f_{n−1}"];
+  b [label="Is the wanted function the MINIMAL\nsolution for n > n*(x)?\n(J_n for n > x, j_l for l > x)", shape=diamond, fillcolor="#fff4dc", color="#eda100"];
+  c [label="Forward recurrence from exact\nf_0, f_1 (P_l, L_n^(a), Y_n, y_l)"];
+  d [label="Miller: choose M ≫ N, set f_{M+1}=0, f_M=tiny"];
+  e [label="Recur DOWNWARDS M → 0\n(rescale if |f| > 10^250)"];
+  f [label="Normalise with a known value or sum\nJ_0+2ΣJ_2k = 1   or   j_0 = sin x / x"];
+  g [label="Converged? repeat with M+10:\n|change| < tol ?", shape=diamond, fillcolor="#fff4dc", color="#eda100"];
+  v [label="Verify: identity (Jacobi–Anger, cross product,\northogonality) + independent reference"];
+  t [label="END", shape=oval, fillcolor="#dff3ea", color="#1baf7a"];
+  s->a->b; b->c [label="no"]; b->d [label="yes"]; d->e->f->g; g->d [label="no, M+10"]; g->v [label="yes"]; c->v->t;
+}

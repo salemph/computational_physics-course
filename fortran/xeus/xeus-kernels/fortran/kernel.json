@@ -1,0 +1,1 @@
+{"display_name": "Fortran", "argv": ["xeus/xeus-kernels/bin/xlfortran.js"], "language": "fortran", "kernel_protocol_version": "5.6.0", "metadata": {"debugger": false, "shared": {"libxeus.so": "lib/libxeus.so"}}, "resources": {"logo-svg": "xeus/xeus-kernels/fortran/logo-svg.svg"}}

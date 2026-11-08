@@ -1,0 +1,57 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2026-11-08T22:08:39.825797Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-11-08T22:08:39.837372Z",
+      "mimetype": null,
+      "name": "python",
+      "path": "Numerov_codes/python",
+      "size": null,
+      "type": "directory",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-11-08T22:08:39.792995Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-11-08T22:08:39.809793Z",
+      "mimetype": null,
+      "name": "figures",
+      "path": "Numerov_codes/figures",
+      "size": null,
+      "type": "directory",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-11-08T22:08:39.811344Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-11-08T22:08:39.824168Z",
+      "mimetype": null,
+      "name": "fortran",
+      "path": "Numerov_codes/fortran",
+      "size": null,
+      "type": "directory",
+      "writable": true
+    }
+  ],
+  "created": "2026-11-08T22:08:39.792280Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2026-11-08T22:08:39.825799Z",
+  "mimetype": null,
+  "name": "Numerov_codes",
+  "path": "Numerov_codes",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

@@ -1,0 +1,71 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2026-11-08T22:08:40.047998Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-11-08T22:08:40.081856Z",
+      "mimetype": null,
+      "name": "python",
+      "path": "numerov-special-functions/vol2_special_functions/python",
+      "size": null,
+      "type": "directory",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-11-08T22:08:40.011220Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-11-08T22:08:40.015850Z",
+      "mimetype": null,
+      "name": "docs",
+      "path": "numerov-special-functions/vol2_special_functions/docs",
+      "size": null,
+      "type": "directory",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-11-08T22:08:40.016263Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-11-08T22:08:40.034491Z",
+      "mimetype": null,
+      "name": "figures",
+      "path": "numerov-special-functions/vol2_special_functions/figures",
+      "size": null,
+      "type": "directory",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-11-08T22:08:40.036056Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-11-08T22:08:40.046760Z",
+      "mimetype": null,
+      "name": "fortran",
+      "path": "numerov-special-functions/vol2_special_functions/fortran",
+      "size": null,
+      "type": "directory",
+      "writable": true
+    }
+  ],
+  "created": "2026-11-08T22:08:40.011184Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2026-11-08T22:08:40.048002Z",
+  "mimetype": null,
+  "name": "vol2_special_functions",
+  "path": "numerov-special-functions/vol2_special_functions",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}
