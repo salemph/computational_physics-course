@@ -1,0 +1,101 @@
+
+### Exercise 1: order from two grids (Problem 1, Part A)
+       N -> 2N     eps(h)   eps(h/2)      p
+    25->    50  1.554e-02  1.011e-03   3.94
+    50->   100  1.011e-03  6.285e-05   4.01
+   100->   200  6.285e-05  3.924e-06   4.00
+   200->   400  3.924e-06  2.455e-07   4.00
+   400->   800  2.455e-07  1.533e-08   4.00
+   800->  1600  1.533e-08  9.503e-10   4.01
+  1600->  3200  9.503e-10  5.401e-11   4.14
+  3200->  6400  5.401e-11  2.180e-10  -2.01
+  6400-> 12800  2.180e-10  1.509e-09  -2.79
+N=    25  error=1.55e-02   truncation est. 1.61e-02   roundoff est. eps*N^2=1.37e-13
+N=    50  error=1.01e-03   truncation est. 1.00e-03   roundoff est. eps*N^2=5.50e-13
+N=   100  error=6.29e-05   truncation est. 6.28e-05   roundoff est. eps*N^2=2.20e-12
+N=   200  error=3.92e-06   truncation est. 3.92e-06   roundoff est. eps*N^2=8.80e-12
+N=   400  error=2.45e-07   truncation est. 2.45e-07   roundoff est. eps*N^2=3.52e-11
+N=   800  error=1.53e-08   truncation est. 1.53e-08   roundoff est. eps*N^2=1.41e-10
+N=  1600  error=9.50e-10   truncation est. 9.58e-10   roundoff est. eps*N^2=5.63e-10
+N=  3200  error=5.40e-11   truncation est. 5.99e-11   roundoff est. eps*N^2=2.25e-09
+N=  6400  error=2.18e-10   truncation est. 3.74e-12   roundoff est. eps*N^2=9.01e-09
+N= 12800  error=1.51e-09   truncation est. 2.34e-13   roundoff est. eps*N^2=3.60e-08
+
+### Exercise 2: third-order Taylor start psi_1 = kh - (kh)^3/6
+     N        h      exact    Taylor1    Taylor3  ratio3
+    25  0.40000  1.554e-02  1.144e-01  1.647e-02     nan
+    50  0.20000  1.011e-03  2.711e-02  1.021e-03   16.13
+   100  0.10000  6.285e-05  6.694e-03  6.430e-05   15.88
+   200  0.05000  3.924e-06  1.668e-03  4.014e-06   16.02
+   400  0.02500  2.455e-07  4.168e-04  2.510e-07   15.99
+   800  0.01250  1.533e-08  1.042e-04  1.567e-08   16.01
+  1600  0.00625  9.503e-10  2.604e-05  9.716e-10   16.13
+  3200  0.00313  5.401e-11  6.510e-06  5.770e-11   16.84
+  order exact: 3.99
+  order Taylor 1st: 2.02
+  order Taylor 3rd: 4.00
+  start-value contribution |e3-e_exact|: 9.3e-04 1.1e-05 1.4e-06 9.0e-08 5.5e-09 3.4e-10 2.1e-11 3.7e-12
+
+### Exercise 3: smallest N giving E_10 with rel. error < 1e-6 (box L=1)
+  N_min = 254, rel.err = 9.757e-07, previous N=252: 1.007e-06
+  wavelength lambda = 2L/n = 0.2, points per wavelength = 50.8, k h = 0.1237
+  N=  40 kh=0.785 rel.err=1.622e-03  (kh)^4/240=1.585e-03
+  N= 100 kh=0.314 rel.err=4.074e-05  (kh)^4/240=4.059e-05
+  N= 254 kh=0.124 rel.err=9.757e-07  (kh)^4/240=9.751e-07
+  N= 200 kh=0.157 rel.err=2.539e-06  (kh)^4/240=2.537e-06
+  points per wavelength needed for 1e-6, other states:
+    n=  1: N_min=   26  points/wavelength=52.0
+    n=  2: N_min=   52  points/wavelength=52.0
+    n=  5: N_min=  128  points/wavelength=51.2
+    n= 10: N_min=  254  points/wavelength=50.8
+    n= 20: N_min=  506  points/wavelength=50.6
+
+### Exercise 4: plane waves e^{ikx} vs discrete e^{i k_h x}
+ E=2.0, padding=2.0:
+   h= 0.10000  |dT| e^ikx = 8.411e-06   e^ik_hx = 8.592e-06   ratio 0.98
+   h= 0.05000  |dT| e^ikx = 5.404e-07   e^ik_hx = 5.518e-07   ratio 0.98
+   h= 0.02500  |dT| e^ikx = 3.427e-08   e^ik_hx = 3.499e-08   ratio 0.98
+   h= 0.01250  |dT| e^ikx = 2.158e-09   e^ik_hx = 2.204e-09   ratio 0.98
+   h= 0.00625  |dT| e^ikx = 1.356e-10   e^ik_hx = 1.385e-10   ratio 0.98
+   h= 0.00313  |dT| e^ikx = 7.875e-12   e^ik_hx = 8.091e-12   ratio 0.97
+ E=2.0, padding=20.0:
+   h= 0.10000  |dT| e^ikx = 8.756e-06   e^ik_hx = 8.592e-06   ratio 1.02
+   h= 0.05000  |dT| e^ikx = 5.625e-07   e^ik_hx = 5.518e-07   ratio 1.02
+   h= 0.02500  |dT| e^ikx = 3.567e-08   e^ik_hx = 3.499e-08   ratio 1.02
+   h= 0.01250  |dT| e^ikx = 2.246e-09   e^ik_hx = 2.204e-09   ratio 1.02
+   h= 0.00625  |dT| e^ikx = 1.411e-10   e^ik_hx = 1.384e-10   ratio 1.02
+   h= 0.00313  |dT| e^ikx = 7.627e-12   e^ik_hx = 7.259e-12   ratio 1.05
+ E=8.0, padding=2.0:
+   h= 0.10000  |dT| e^ikx = 3.119e-04   e^ik_hx = 2.886e-04   ratio 1.08
+   h= 0.05000  |dT| e^ikx = 2.097e-05   e^ik_hx = 1.982e-05   ratio 1.06
+   h= 0.02500  |dT| e^ikx = 1.341e-06   e^ik_hx = 1.279e-06   ratio 1.05
+   h= 0.01250  |dT| e^ikx = 8.446e-08   e^ik_hx = 8.091e-08   ratio 1.04
+   h= 0.00625  |dT| e^ikx = 5.293e-09   e^ik_hx = 5.082e-09   ratio 1.04
+   h= 0.00313  |dT| e^ikx = 3.212e-10   e^ik_hx = 3.085e-10   ratio 1.04
+ E=8.0, padding=20.0:
+   h= 0.10000  |dT| e^ikx = 3.188e-04   e^ik_hx = 2.886e-04   ratio 1.10
+   h= 0.05000  |dT| e^ikx = 2.156e-05   e^ik_hx = 1.982e-05   ratio 1.09
+   h= 0.02500  |dT| e^ikx = 1.381e-06   e^ik_hx = 1.279e-06   ratio 1.08
+   h= 0.01250  |dT| e^ikx = 8.713e-08   e^ik_hx = 8.091e-08   ratio 1.08
+   h= 0.00625  |dT| e^ikx = 5.463e-09   e^ik_hx = 5.081e-09   ratio 1.08
+   h= 0.00313  |dT| e^ikx = 3.313e-10   e^ik_hx = 3.091e-10   ratio 1.07
+
+### Exercise 5: thick barrier V0=5, a=6, E=1
+  kappa=2.82843, kappa*a=16.9706
+  T exact          = 4.653679e-15
+  T WKB e^-2ka     = 1.817843e-15   ratio exact/WKB = 2.5600
+  T asymptotic 16E(V0-E)/V0^2 e^-2ka = 4.653679e-15  (prefactor 2.560)
+  h= 0.05000  T=4.65345430e-15  rel.err=4.84e-05   R=0.99999999999999079  R+T-1=-4.55e-15
+  h= 0.02500  T=4.65366495e-15  rel.err=3.09e-06   R=0.99999999999996469  R+T-1=-3.06e-14
+  h= 0.01250  T=4.65367840e-15  rel.err=1.95e-07   R=0.99999999999993749  R+T-1=-5.78e-14
+  h= 0.00625  T=4.65367925e-15  rel.err=1.22e-08   R=1.00000000000018940  R+T-1=1.94e-13
+  h= 0.00313  T=4.65367931e-15  rel.err=6.00e-10   R=0.99999999999941325  R+T-1=-5.82e-13
+  |A| ~ 1/sqrt(T) = 1.466e+07  (amplitude grows by e^(kappa a)=2.35e+07 across barrier)
+  thickness scan, h=0.00625:
+    a=  1  T=8.9258e-03  exact=8.9258e-03  rel.err=6.47e-09  WKB/exact=0.391  R+T-1=-3.8e-11
+    a=  2  T=3.1243e-05  exact=3.1243e-05  rel.err=7.63e-09  WKB/exact=0.391  R+T-1=-2.8e-13
+    a=  4  T=3.8131e-10  exact=3.8131e-10  rel.err=9.93e-09  WKB/exact=0.391  R+T-1=-1.4e-15
+    a=  6  T=4.6537e-15  exact=4.6537e-15  rel.err=1.22e-08  WKB/exact=0.391  R+T-1=1.9e-13
+    a=  8  T=5.6796e-20  exact=5.6796e-20  rel.err=1.45e-08  WKB/exact=0.391  R+T-1=-4.7e-14
+    a= 10  T=6.9316e-25  exact=6.9316e-25  rel.err=1.68e-08  WKB/exact=0.391  R+T-1=6.4e-14
+    a= 12  T=8.4597e-30  exact=8.4597e-30  rel.err=1.91e-08  WKB/exact=0.391  R+T-1=-5.0e-13

@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+# Fortran build products
+*.mod
+*.o
+vol1_numerov/fortran/p[123]
+vol1_numerov/exercises/ex10_sp
+vol1_numerov/exercises/ex10_dp
+vol2_special_functions/fortran/ch[1234]
+build/
+# Document build intermediates (rebuilt by `make docs`)
+**/raw.docx
+**/*_full.md
+**/course.md.tmp
+*.pdf
+# Built documents are published as GitHub Release assets, not committed
+dist/
+**/*.docx
+vol2_special_functions/docs/course.md

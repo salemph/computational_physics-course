@@ -1,0 +1,60 @@
+==============================================================================
+PART A  Legendre polynomials and associated Legendre functions
+==============================================================================
+P_l(x): Bonnet recurrence vs explicit sum vs mpmath (50 digits)
+   l      x               recurrence                   mpmath  rel.err rec  rel.err sum
+  10   0.30    2.514763495160157e-01    2.514763495160156e-01     2.21e-16     4.41e-16
+  40   0.30    1.251158458557079e-01    1.251158458557080e-01     2.22e-16     3.03e-12
+  60   0.05   -1.019617243819477e-01   -1.019617243819477e-01     0.00e+00     8.17e-16
+ 100   0.90    1.022658205587189e-01    1.022658205587189e-01     4.07e-16     6.70e+17
+
+Normalised Pbar_l^m vs unnormalised recurrence vs mpmath, x = 0.5
+  l=  5 m=  2: Pbar = -3.982651281554631e-01  mpmath = -3.982651281554632e-01  rel.err 1.4e-16   unnormalised: -3.982651e-01
+  l= 30 m= 10: Pbar = -6.749148403751998e-01  mpmath = -6.749148403752004e-01  rel.err 9.9e-16   unnormalised: -6.749148e-01
+  l=120 m=100: Pbar =  1.125981542749368e+00  mpmath =  1.125981542749375e+00  rel.err 5.7e-15   unnormalised:  1.125982e+00
+  l=200 m=180: Pbar =  7.231608361615147e-02  mpmath =  7.231608361615227e-02  rel.err 1.1e-14   unnormalised: overflow (inf)
+
+orthonormality of Pbar_l^3, l=3..20, 30-point Gauss-Legendre: max|G-I| = 7.4e-16
+agreement with scipy lpmv (normalised): 3.6e-15
+30-point rule: sum w = 2.000000000000000, int x^58 dx exact? err = 3.5e-17
+
+Gauss-Legendre quadrature errors (n nodes):
+  n= 2: e^x: 7.7e-03  1/(1+25x^2): 3.4e-01  |x|^3: 1.2e-01   trapezoid e^x: 7.4e-01
+  n= 4: e^x: 3.0e-07  1/(1+25x^2): 1.8e-01  |x|^3: 4.5e-03   trapezoid e^x: 8.6e-02
+  n= 8: e^x: 1.0e-18  1/(1+25x^2): 4.1e-02  |x|^3: 2.9e-04   trapezoid e^x: 1.6e-02
+  n=12: e^x: 4.5e-16  1/(1+25x^2): 8.7e-03  |x|^3: 6.0e-05   trapezoid e^x: 6.5e-03
+  n=20: e^x: 8.9e-16  1/(1+25x^2): 3.6e-04  |x|^3: 8.1e-06   trapezoid e^x: 2.2e-03
+  n=40: e^x: 4.5e-16  1/(1+25x^2): 1.3e-07  |x|^3: 5.3e-07   trapezoid e^x: 5.2e-04
+
+==============================================================================
+PART B  Angular equation / rigid rotor: Numerov in theta, N = 400 (h = pi/400), t_s = 0.4
+==============================================================================
+  scan m=1: sign changes of D(lambda) near 2.02, 5.97, 11.98, 19.98, 29.98, 41.98  (exact 2, 6, 12, 20, 30, 42)
+
+ l  m     lambda Numerov  l(l+1)    |dlam|            norm  max|u-u_ex|    <cos^2>      exact
+ 0  0    -0.000000002115       0   2.1e-09  1.000000000000      7.8e-09  0.3333333  0.3333333
+ 1  0     1.999999994594       2   5.4e-09  1.000000000000      1.4e-08  0.6000000  0.6000000
+ 2  0     5.999999991221       6   8.8e-09  1.000000000000      1.7e-08  0.5238095  0.5238095
+ 1  1     2.000000000168       2   1.7e-10  1.000000000000      1.2e-10  0.2000000  0.2000000
+ 2  1     5.999999998116       6   1.9e-09  1.000000000000      4.5e-10  0.4285714  0.4285714
+ 3  1    11.999999979338      12   2.1e-08  1.000000000000      1.2e-09  0.4666667  0.4666667
+ 2  2     5.999999999185       6   8.1e-10  1.000000000000      5.6e-11  0.1428571  0.1428571
+ 3  2    11.999999989533      12   1.0e-08  1.000000000000      4.0e-10  0.3333333  0.3333333
+ 5  3    29.999999892684      30   1.1e-07  1.000000000000      4.7e-09  0.3504273  0.3504274
+  orthogonality m=1: max |<u_l|u_l'>| = 6.6e-10;   parity u(pi-t) = (-1)^(l+m) u(t): max err 8.2e-12
+
+Eigenvalue error vs h: Frobenius start at first two grid nodes  vs  at fixed t_s = 0.4
+     N        h    m=0 nodes     m=0 t_s    m=1 nodes     m=1 t_s    m=2 nodes     m=2 t_s
+    20  0.15708     1.44e-02    5.01e-04     2.84e-04    3.74e-04     1.65e-03    1.78e-03
+    40  0.07854     1.63e-02    6.88e-05     1.90e-04    2.03e-05     1.06e-04    1.06e-04
+    80  0.03927     1.70e-02    5.10e-06     5.60e-05    1.21e-06     6.93e-06    6.56e-06
+   160  0.01963     1.72e-02    3.49e-07     1.46e-05    7.30e-08     4.53e-07    4.09e-07
+   320  0.00982     1.73e-02    2.08e-08     3.69e-06    4.64e-09     2.95e-08    2.56e-08
+   640  0.00491     1.73e-02    1.40e-09     9.26e-07    2.83e-10     1.92e-09    1.59e-09
+  1280  0.00245     1.74e-02    9.75e-11     2.32e-07    2.00e-11     1.26e-10    1.04e-10
+  m=0 first nodes : observed order -0.02
+  m=0 t_s = 0.4   : observed order 3.91
+  m=1 first nodes : observed order 1.93
+  m=1 t_s = 0.4   : observed order 4.03
+  m=2 first nodes : observed order 3.94
+  m=2 t_s = 0.4   : observed order 4.00

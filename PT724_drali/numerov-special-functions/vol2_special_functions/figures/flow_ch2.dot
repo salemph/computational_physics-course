@@ -1,0 +1,16 @@
+digraph G {
+  graph [fontname="Helvetica", fontsize=11, nodesep=0.25, ranksep=0.3, bgcolor="white"];
+  node  [fontname="Helvetica", fontsize=10, shape=box, style="rounded,filled", fillcolor="#eef4fc", color="#2a78d6", penwidth=1.3, margin="0.15,0.06"];
+  edge  [fontname="Helvetica", fontsize=9, color="#555555", arrowsize=0.7];
+  s [label="START: m, N even, h = π/N, θ_s", shape=oval, fillcolor="#dff3ea", color="#1baf7a"];
+  a [label="c_j = 1 + h²[λ + ¼ + (¼ − m²)/sin²θ_j]/12"];
+  b [label="Frobenius u = θ^{m+½} Σ a_k θ^{2k} on nodes ≤ θ_s+h\n(at BOTH poles, mirror image)"];
+  c [label="Numerov from θ = 0 up to M+1 = N/2+1\nNumerov from θ = π down to M−1"];
+  d [label="D(λ) = u^L_{M+1}u^R_M − u^L_M u^R_{M+1}"];
+  e [label="Bracket λ ∈ [l²−½, l²+2l+3/2] and bisect"];
+  f [label="Glue, normalise ∫u²dθ = ∫Θ² sinθ dθ = 1"];
+  v [label="Verify: λ = l(l+1),  u vs √sinθ P̄_l^m(cosθ),\n⟨cos²θ⟩, parity (−1)^{l+m}, orthogonality"];
+  x [label="Error analysis: start at first nodes (order 2m)\nvs fixed θ_s (order 4)"];
+  t [label="END", shape=oval, fillcolor="#dff3ea", color="#1baf7a"];
+  s->a->b->c->d->e->f->v->x->t;
+}

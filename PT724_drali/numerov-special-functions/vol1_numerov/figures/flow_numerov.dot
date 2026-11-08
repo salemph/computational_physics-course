@@ -1,0 +1,16 @@
+digraph G {
+  graph [fontname="Helvetica", fontsize=11, nodesep=0.25, ranksep=0.3, bgcolor="white"];
+  node  [fontname="Helvetica", fontsize=10, shape=box, style="rounded,filled", fillcolor="#eef4fc", color="#2a78d6", penwidth=1.3, margin="0.15,0.06"];
+  edge  [fontname="Helvetica", fontsize=9, color="#555555", arrowsize=0.7];
+  s [label="START", shape=oval, fillcolor="#dff3ea", color="#1baf7a"];
+  a [label="Read E, V(x), grid x_0..x_N, step h"];
+  b [label="k²_i = 2[E − V(x_i)],   c_i = 1 + h² k²_i / 12"];
+  c [label="Starting values ψ_0, ψ_1\n(boundary condition / exact or asymptotic form)"];
+  d [label="n = 1"];
+  e [label="ψ_{n+1} = [(12 − 10 c_n) ψ_n − c_{n−1} ψ_{n−1}] / c_{n+1}"];
+  f [label="n < N − 1 ?", shape=diamond, fillcolor="#fff4dc", color="#eda100"];
+  g [label="n = n + 1"];
+  h [label="Return ψ_0 … ψ_N"];
+  t [label="END", shape=oval, fillcolor="#dff3ea", color="#1baf7a"];
+  s->a->b->c->d->e->f; f->g [label="yes"]; g->e; f->h [label="no"]; h->t;
+}

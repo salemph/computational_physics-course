@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use these course notes or codes, please cite them as below."
+title: "Numerov method and special functions of mathematical physics: course notes with Python 3 and Fortran codes"
+type: software
+authors:
+  - family-names: "<Your family name>"
+    given-names: "<Your given name>"
+version: "1.0.0"
+repository-code: "https://github.com/<your-user>/numerov-special-functions"
+date-released: "2026-11-08"
+license: MIT
+keywords:
+  - Numerov method
+  - Schrödinger equation
+  - special functions
+  - Laguerre polynomials
+  - Legendre functions
+  - Bessel functions
+  - computational physics

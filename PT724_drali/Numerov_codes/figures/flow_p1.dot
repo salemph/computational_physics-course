@@ -1,0 +1,21 @@
+digraph G {
+  graph [fontname="Helvetica", fontsize=11, nodesep=0.25, ranksep=0.3, bgcolor="white"];
+  node  [fontname="Helvetica", fontsize=10, shape=box, style="rounded,filled", fillcolor="#eef4fc", color="#2a78d6", penwidth=1.3, margin="0.15,0.06"];
+  edge  [fontname="Helvetica", fontsize=9, color="#555555", arrowsize=0.7];
+  s [label="START", shape=oval, fillcolor="#dff3ea", color="#1baf7a"];
+  a [label="Input: L, N, state n\nh = L/N,  V = 0"];
+  b [label="Bracket: scan E over [E_a, E_b]\nrecord sign changes of ψ(L;E)"];
+  c [label="Shoot: ψ_0 = 0, ψ_1 = small\nNumerov 0 → L  ⇒  ψ(L;E)"];
+  d [label="Bisection on [a, b]\nm = (a+b)/2, shoot at m"];
+  e [label="sign ψ(L;m) = sign ψ(L;a) ?", shape=diamond, fillcolor="#fff4dc", color="#eda100"];
+  e1 [label="a = m"]; e2 [label="b = m"];
+  f [label="b − a < tol ?", shape=diamond, fillcolor="#fff4dc", color="#eda100"];
+  g [label="E_n = (a+b)/2 ; final shot ψ(x)"];
+  h [label="Normalise: ψ ← ψ / √(Simpson ∫ψ² dx)"];
+  i [label="Verify: compare E_n with n²π²/2L², ψ with √(2/L) sin(nπx/L),\noverlaps ⟨ψ_i|ψ_j⟩ = δ_ij"];
+  j [label="Error analysis: repeat for N = 20…1280,\nfit slope of log|ΔE| vs log h, Richardson"];
+  t [label="END: tables + convergence plot", shape=oval, fillcolor="#dff3ea", color="#1baf7a"];
+  s->a->b; b->c [style=dashed, label="each E"]; c->b [style=dashed];
+  b->d->e; e->e1 [label="yes"]; e->e2 [label="no"]; e1->f; e2->f; f->d [label="no"]; f->g [label="yes"];
+  g->h->i->j->t;
+}
