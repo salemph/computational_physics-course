@@ -1,0 +1,53 @@
+"""Bibliography of the course.  key -> (category, formatted entry).
+Citations in the markdown are written [@key] or [@key, locator] or [@k1; @k2, loc]."""
+REFS = {
+    # ---------------------------------------------------------------- reference works
+    "DLMF": ("Reference works", "F. W. J. Olver, A. B. Olde Daalhuis, D. W. Lozier, B. I. Schneider, R. F. Boisvert, C. W. Clark et al. (eds.), *NIST Digital Library of Mathematical Functions*, https://dlmf.nist.gov (online, continuously updated)."),
+    "NISTHB": ("Reference works", "F. W. J. Olver, D. W. Lozier, R. F. Boisvert and C. W. Clark (eds.), *NIST Handbook of Mathematical Functions*, Cambridge University Press (2010)."),
+    "AS": ("Reference works", "M. Abramowitz and I. A. Stegun (eds.), *Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables*, NBS Applied Mathematics Series 55, U.S. Government Printing Office (1964)."),
+    "EoM": ("Reference works", "\"Special functions\", *Encyclopedia of Mathematics*, EMS Press, https://encyclopediaofmath.org/wiki/Special_functions."),
+    # ---------------------------------------------------------------- textbooks on special functions
+    "Watson": ("Special functions — textbooks", "G. N. Watson, *A Treatise on the Theory of Bessel Functions*, 2nd ed., Cambridge University Press (1944)."),
+    "Lebedev": ("Special functions — textbooks", "N. N. Lebedev, *Special Functions and Their Applications*, Prentice-Hall (1965); Dover reprint (1972)."),
+    "Szego": ("Special functions — textbooks", "G. Szegő, *Orthogonal Polynomials*, AMS Colloquium Publications vol. 23, American Mathematical Society (1939; 4th ed. 1975)."),
+    "AAR": ("Special functions — textbooks", "G. E. Andrews, R. Askey and R. Roy, *Special Functions*, Encyclopedia of Mathematics and its Applications 71, Cambridge University Press (1999)."),
+    "Temme": ("Special functions — textbooks", "N. M. Temme, *Special Functions: An Introduction to the Classical Functions of Mathematical Physics*, Wiley (1996)."),
+    "Arfken": ("Special functions — textbooks", "G. B. Arfken, H. J. Weber and F. E. Harris, *Mathematical Methods for Physicists*, 7th ed., Academic Press (2013)."),
+    "CH": ("Special functions — textbooks", "R. Courant and D. Hilbert, *Methods of Mathematical Physics*, vol. I, Interscience (1953)."),
+    "BO": ("Special functions — textbooks", "C. M. Bender and S. A. Orszag, *Advanced Mathematical Methods for Scientists and Engineers*, McGraw-Hill (1978); Springer reprint (1999)."),
+    # ---------------------------------------------------------------- numerical methods
+    "GST": ("Numerical methods", "A. Gil, J. Segura and N. M. Temme, *Numerical Methods for Special Functions*, SIAM, Philadelphia (2007), ISBN 978-0-898716-34-4."),
+    "Gautschi67": ("Numerical methods", "W. Gautschi, \"Computational aspects of three-term recurrence relations\", *SIAM Review* **9**, 24–82 (1967), doi:10.1137/1009002."),
+    "Miller52": ("Numerical methods", "J. C. P. Miller, *Bessel Functions, Part II: Functions of Positive Integer Order*, British Association for the Advancement of Science, Mathematical Tables vol. X, Cambridge University Press (1952)."),
+    "Olver64": ("Numerical methods", "F. W. J. Olver, \"Error analysis of Miller's recurrence algorithm\", *Mathematics of Computation* **18**, 65–74 (1964)."),
+    "GW69": ("Numerical methods", "G. H. Golub and J. H. Welsch, \"Calculation of Gauss quadrature rules\", *Mathematics of Computation* **23**, 221–230 (1969), doi:10.2307/2004418."),
+    "SS66": ("Numerical methods", "A. H. Stroud and D. Secrest, *Gaussian Quadrature Formulas*, Prentice-Hall (1966)."),
+    "NR": ("Numerical methods", "W. H. Press, S. A. Teukolsky, W. T. Vetterling and B. P. Flannery, *Numerical Recipes: The Art of Scientific Computing*, 3rd ed., Cambridge University Press (2007)."),
+    "Trefethen08": ("Numerical methods", "L. N. Trefethen, \"Is Gauss quadrature better than Clenshaw–Curtis?\", *SIAM Review* **50**, 67–87 (2008)."),
+    "Numerov24": ("Numerical methods", "B. V. Numerov, \"A method of extrapolation of perturbations\", *Monthly Notices of the Royal Astronomical Society* **84**, 592–601 (1924)."),
+    "Richardson27": ("Numerical methods", "L. F. Richardson and J. A. Gaunt, \"The deferred approach to the limit\", *Philosophical Transactions of the Royal Society A* **226**, 299–361 (1927)."),
+    "Thijssen": ("Numerical methods", "J. M. Thijssen, *Computational Physics*, 2nd ed., Cambridge University Press (2007)."),
+    "KM": ("Numerical methods", "S. E. Koonin and D. C. Meredith, *Computational Physics: Fortran Version*, Addison-Wesley (1990)."),
+    # ---------------------------------------------------------------- software
+    "mpmath": ("Software", "The mpmath development team, *mpmath: a Python library for arbitrary-precision floating-point arithmetic*, https://mpmath.org."),
+    "SciPy": ("Software", "P. Virtanen et al., \"SciPy 1.0: fundamental algorithms for scientific computing in Python\", *Nature Methods* **17**, 261–272 (2020)."),
+    "NumPy": ("Software", "C. R. Harris et al., \"Array programming with NumPy\", *Nature* **585**, 357–362 (2020)."),
+    "SymPy": ("Software", "A. Meurer et al., \"SymPy: symbolic computing in Python\", *PeerJ Computer Science* **3**, e103 (2017)."),
+    "F2008": ("Software", "ISO/IEC 1539-1:2010, *Information technology — Programming languages — Fortran — Part 1: Base language* (Fortran 2008)."),
+    "MRC": ("Software", "M. Metcalf, J. Reid and M. Cohen, *Modern Fortran Explained: Incorporating Fortran 2018*, Oxford University Press (2018)."),
+    # ---------------------------------------------------------------- physics
+    "BS": ("Quantum mechanics and applications", "H. A. Bethe and E. E. Salpeter, *Quantum Mechanics of One- and Two-Electron Atoms*, Springer (1957)."),
+    "LL": ("Quantum mechanics and applications", "L. D. Landau and E. M. Lifshitz, *Quantum Mechanics (Non-relativistic Theory)*, 3rd ed., Pergamon (1977)."),
+    "Messiah": ("Quantum mechanics and applications", "A. Messiah, *Quantum Mechanics*, vol. I, North-Holland (1961)."),
+    "Sakurai": ("Quantum mechanics and applications", "J. J. Sakurai and J. Napolitano, *Modern Quantum Mechanics*, 2nd ed., Cambridge University Press (2017)."),
+    "Griffiths": ("Quantum mechanics and applications", "D. J. Griffiths and D. F. Schroeter, *Introduction to Quantum Mechanics*, 3rd ed., Cambridge University Press (2018)."),
+    "Zare": ("Quantum mechanics and applications", "R. N. Zare, *Angular Momentum: Understanding Spatial Aspects in Chemistry and Physics*, Wiley (1988)."),
+    "TS": ("Quantum mechanics and applications", "C. H. Townes and A. L. Schawlow, *Microwave Spectroscopy*, McGraw-Hill (1955); Dover reprint (1975)."),
+    "Rogers70": ("Quantum mechanics and applications", "F. J. Rogers, H. C. Graboske Jr. and D. J. Harwood, \"Bound eigenstates of the static screened Coulomb potential\", *Physical Review A* **1**, 1577–1586 (1970)."),
+    "Crommie93": ("Quantum mechanics and applications", "M. F. Crommie, C. P. Lutz and D. M. Eigler, \"Confinement of electrons to quantum corrals on a metal surface\", *Science* **262**, 218–220 (1993)."),
+    "BM": ("Quantum mechanics and applications", "A. Bohr and B. R. Mottelson, *Nuclear Structure*, vol. I: Single-Particle Motion, W. A. Benjamin (1969)."),
+    "Mayer49": ("Quantum mechanics and applications", "M. G. Mayer, \"On closed shells in nuclei. II\", *Physical Review* **75**, 1969–1970 (1949)."),
+    "HJS49": ("Quantum mechanics and applications", "O. Haxel, J. H. D. Jensen and H. E. Suess, \"On the 'magic numbers' in nuclear structure\", *Physical Review* **75**, 1766 (1949)."),
+    "Krane": ("Quantum mechanics and applications", "K. S. Krane, *Introductory Nuclear Physics*, Wiley (1988)."),
+    "Course1": ("Quantum mechanics and applications", "*The Numerov Method for the One-Dimensional Schrödinger Equation*, companion course notes (first volume of this series) (2026)."),
+}

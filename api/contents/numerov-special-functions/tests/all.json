@@ -1,0 +1,29 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2026-11-08T14:40:10Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-11-08T14:40:10Z",
+      "mimetype": "text/x-python",
+      "name": "test_quick.py",
+      "path": "numerov-special-functions/tests/test_quick.py",
+      "size": 2797,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2026-11-08T21:37:13.310335Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2026-11-08T21:37:13.310404Z",
+  "mimetype": null,
+  "name": "tests",
+  "path": "numerov-special-functions/tests",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

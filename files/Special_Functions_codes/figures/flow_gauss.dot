@@ -1,0 +1,16 @@
+digraph G {
+  graph [fontname="Helvetica", fontsize=11, nodesep=0.25, ranksep=0.3, bgcolor="white"];
+  node  [fontname="Helvetica", fontsize=10, shape=box, style="rounded,filled", fillcolor="#eef4fc", color="#2a78d6", penwidth=1.3, margin="0.15,0.06"];
+  edge  [fontname="Helvetica", fontsize=9, color="#555555", arrowsize=0.7];
+  s [label="START: n-point Gauss rule\n(Legendre or Laguerre weight)", shape=oval, fillcolor="#dff3ea", color="#1baf7a"];
+  a [label="i = 1"];
+  b [label="Initial guess z: Tricomi cos(π(i−¼)/(n+½))\nor Stroud–Secrest (Laguerre)"];
+  c [label="Evaluate p_n(z), p_{n−1}(z) by the recurrence\np'_n(z) from the derivative identity"];
+  d [label="Newton: z ← z − p_n(z)/p'_n(z)"];
+  e [label="|Δz| < 10^{−15} ?", shape=diamond, fillcolor="#fff4dc", color="#eda100"];
+  f [label="x_i = z,  w_i from closed formula\n2/((1−z²)p'_n²)   or   Γ(n+α+1) z/(n!(n+1)² L_{n+1}²)"];
+  g [label="i < n ?", shape=diamond, fillcolor="#fff4dc", color="#eda100"];
+  v [label="Verify: Σw_i = ∫weight,  exactness for x^k (k ≤ 2n−1),\nagreement with Golub–Welsch eigenvalues"];
+  t [label="END", shape=oval, fillcolor="#dff3ea", color="#1baf7a"];
+  s->a->b->c->d->e; e->c [label="no"]; e->f [label="yes"]; f->g; g->b [label="yes, i+1"]; g->v [label="no"]; v->t;
+}

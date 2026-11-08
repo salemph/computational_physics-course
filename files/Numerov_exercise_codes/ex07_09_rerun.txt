@@ -1,0 +1,35 @@
+
+### Exercise 7: one-sided shooting for the oscillator ground state, h = 0.01
+  L=  3: E0 = 0.500391082887956   |E0-0.5| = 3.91e-04   e^(L^2/2)=9.0e+01
+  L=  4: E0 = 0.500000490817753   |E0-0.5| = 4.91e-07   e^(L^2/2)=3.0e+03
+  L=  5: E0 = 0.500000000037720   |E0-0.5| = 3.77e-11   e^(L^2/2)=2.7e+05
+  L=  6: E0 = 0.499999999961025   |E0-0.5| = 3.90e-11   e^(L^2/2)=6.6e+07
+  L=  7: E0 = 0.499999999960983   |E0-0.5| = 3.90e-11   e^(L^2/2)=4.4e+10
+  L=  8: E0 = 0.499999999960687   |E0-0.5| = 3.93e-11   e^(L^2/2)=7.9e+13
+  L=  9: E0 = 0.499999999961013   |E0-0.5| = 3.90e-11   e^(L^2/2)=3.9e+17
+  L= 10: E0 = 0.499999999961106   |E0-0.5| = 3.89e-11   e^(L^2/2)=5.2e+21
+  L= 12: E0 = 0.499999999961106   |E0-0.5| = 3.89e-11   e^(L^2/2)=1.9e+31
+  L= 15: E0 = 0.499999999960983   |E0-0.5| = 3.90e-11   e^(L^2/2)=7.2e+48
+  L= 20: E0 = 0.499999999960982   |E0-0.5| = 3.90e-11   e^(L^2/2)=7.2e+86
+  L= 30: psi_N(0.3)=nan, psi_N(0.7)=nan -> no usable bracket
+  L= 38: psi_N(0.3)=nan, psi_N(0.7)=nan -> no usable bracket
+  L=8: one-sided psi departs from exact (factor 10) beyond x = 6.04; psi(L) = -7.08e-02
+
+### Exercise 9: finite square well V=-10.0 for |x|<1.0
+  exact even: E = -9.180259926233  q=1.280422 kappa=4.284918  check 4.2849177183 = 4.2849177183
+  exact odd : E = -6.779060021410  q=2.538086 kappa=3.682135  check 3.6821352559 = 3.6821352559
+  exact even: E = -3.054233508774  q=3.727135 kappa=2.471531  check 2.4715313103 = 2.4715313103
+  Numerov, corrected scheme, h=0.01:
+   E = -9.180259901486 (even)  |dE| = 2.47e-08   residual of exact condition 3.72e-07  parity check psi(x)=+psi(-x): 2.5e-14
+   E = -6.779059962042 (odd)  |dE| = 5.94e-08   residual of exact condition 2.34e-07  parity check psi(x)=-psi(-x): 6.4e-10
+   E = -3.054233501211 (even)  |dE| = 7.56e-09   residual of exact condition 1.53e-08  parity check psi(x)=+psi(-x): 1.2e-13
+        h   misaligned      aligned    corrected   (max |dE| over all bound states)
+  0.10000     2.09e-02     3.64e-02     4.51e-04
+  0.05000     5.12e-03     9.66e-03     3.28e-05
+  0.02500     1.28e-03     2.48e-03     2.21e-06
+  0.01250     3.18e-04     6.28e-04     1.44e-07
+  0.00625     7.96e-05     1.58e-04     9.15e-09
+  0.00313     1.99e-05     3.97e-05     6.80e-10
+  order misaligned: 2.01
+  order aligned: 1.96
+  order corrected: 3.90
